@@ -1,5 +1,8 @@
 import 'package:bookly_app/core/utils/assets.dart';
+import 'package:bookly_app/features/home/precention/views/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -21,6 +24,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
+    navigateHomePage();
 
     // Logo animation controller
     _logoController = AnimationController(
@@ -58,6 +62,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
       Future.delayed(const Duration(milliseconds: 200), () {
         _textController.forward();
       });
+    });
+  }
+
+  void navigateHomePage() {
+    Future.delayed(const Duration(milliseconds: 5000), () {
+      // Navigate to HomeView after a delay
+      Get.to(() => const HomeView(), transition: Transition.fadeIn);
     });
   }
 
