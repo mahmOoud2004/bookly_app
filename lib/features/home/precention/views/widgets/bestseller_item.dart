@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:go_router/go_router.dart';
 
+import 'book_rating.dart';
+
 class BestsellerItem extends StatelessWidget {
   const BestsellerItem({super.key});
 
@@ -62,9 +64,7 @@ class BestsellerItem extends StatelessWidget {
                       children: [
                         Text("49.99\$", style: Style.textStyle30.copyWith()),
                         SizedBox(width: 50),
-                        Icon(Icons.star, color: Colors.yellow, size: 30),
-
-                        Text("4.3", style: Style.textStyle30.copyWith()),
+                        BookRating(),
                       ],
                     ),
                   ],

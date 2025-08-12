@@ -8,7 +8,7 @@ class BookDetailsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: width * .17),
+      padding: EdgeInsets.symmetric(horizontal: width * .19),
       child: AspectRatio(
         aspectRatio: 2.6 / 4,
         child: Container(
